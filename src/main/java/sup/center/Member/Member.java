@@ -6,7 +6,7 @@ public class Member {
     private Long size;
     private Long price;
 
-    public Member(Long id, String name, Long size, Long price, Grade grade) {
+    public Member(Long id, String name, Grade grade) {
         this.id = id;
         this.name = name;
         this.size = size;
