@@ -14,8 +14,8 @@ public class OrderApp {
         OrderService orderService = new OrderServiceImpl();
 
         Long memberId = 1L;
-        Long memberSize = 270L;
-        Member member = new Member(memberId, "memberA", memberSize, Grade.VIP);
+        int memberSize = 275;
+        Member member = new Member(memberId, "memberA", 275, Grade.VIP);
         memberService.join(member);
 
         Order order = orderService.createOrder(memberId, "itemA",10000, 270);

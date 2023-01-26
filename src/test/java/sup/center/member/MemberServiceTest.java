@@ -13,7 +13,7 @@ public class MemberServiceTest {
     @Test
     void join() {
         //given
-        Member member = new Member(1L,"member1", Grade.VIP);
+        Member member = new Member(1L,"member1",275,Grade.VIP);
         //when
         memberService.join(member);
         Member findMember = memberService.findMember(1L);
