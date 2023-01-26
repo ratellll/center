@@ -3,14 +3,13 @@ package sup.center.Member;
 public class Member {
     private Long id;
     private String name;
-    private Long size;
-    private Long price;
+    private int  size;
 
-    public Member(Long id, String name, Grade grade) {
+
+    public Member(Long id, String name, int size,Grade grade) {
         this.id = id;
         this.name = name;
         this.size = size;
-        this.price = price;
         this.grade = grade;
     }
 
@@ -30,21 +29,14 @@ public class Member {
         this.name = name;
     }
 
-    public Long getSize() {
+    public int getSize() {
         return size;
     }
 
-    public void setSize(Long size) {
+    public void setSize(int size) {
         this.size = size;
     }
 
-    public Long getPrice() {
-        return price;
-    }
-
-    public void setPrice(Long price) {
-        this.price = price;
-    }
 
     public Grade getGrade() {
         return grade;
