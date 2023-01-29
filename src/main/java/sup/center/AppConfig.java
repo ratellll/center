@@ -1,9 +1,7 @@
 package sup.center;
 
-import sup.center.Member.Member;
-import sup.center.Member.MemberService;
-import sup.center.Member.MemberServiceImpl;
-import sup.center.Member.MemoryMemberRepository;
+import sup.center.Member.*;
+import sup.center.discount.DiscountPolicy;
 import sup.center.discount.FixDiscountPolicy;
 import sup.center.order.OrderService;
 import sup.center.order.OrderServiceImpl;
@@ -12,13 +10,20 @@ public class AppConfig {
 
 
     public MemberService memberService(){
-        return new MemberServiceImpl(new MemoryMemberRepository());
+        return new MemberServiceImpl(memberRepository());
 
         }
 
+    private MemberRepository memberRepository() {
+        return new MemoryMemberRepository();
+    }
+
     public OrderService orderService() {
-        return new OrderServiceImpl(new MemoryMemberRepository(), new FixDiscountPolicy());
+        return new OrderServiceImpl(memberRepository(),discountPolicy());
     }
 
 
+    public DiscountPolicy discountPolicy () {
+        return new FixDiscountPolicy();
+    }
 }
