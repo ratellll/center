@@ -4,12 +4,21 @@ import sup.center.Member.Member;
 import sup.center.Member.MemberRepository;
 import sup.center.Member.MemoryMemberRepository;
 import sup.center.discount.DiscountPolicy;
-import sup.center.discount.FixDiscountPolicy;
+
 
 public class OrderServiceImpl implements OrderService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
-    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+    private final MemberRepository memberRepository;
+    private  final DiscountPolicy discountPolicy;
+
+
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
+
+
+
 
 
     @Override
