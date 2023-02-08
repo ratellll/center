@@ -1,6 +1,6 @@
 package sup.center.discount;
 
-import sup.center.Member.Member;
+import sup.center.member.Member;
 
 public interface DiscountPolicy {
 

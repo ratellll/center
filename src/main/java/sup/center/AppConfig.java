@@ -2,7 +2,7 @@ package sup.center;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import sup.center.Member.*;
+import sup.center.member.*;
 import sup.center.discount.DiscountPolicy;
 import sup.center.discount.RateDiscountPolicy;
 import sup.center.order.OrderService;

@@ -6,10 +6,8 @@ import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import sup.center.AppConfig;
-import sup.center.Member.MemberRepository;
-import sup.center.Member.MemoryMemberRepository;
-import sup.center.discount.DiscountPolicy;
+import sup.center.member.MemberRepository;
+import sup.center.member.MemoryMemberRepository;
 
 import java.util.Map;
 

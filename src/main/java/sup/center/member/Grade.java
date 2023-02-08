@@ -1,4 +1,4 @@
-package sup.center.Member;
+package sup.center.member;
 
 public enum Grade {
     BASIC,

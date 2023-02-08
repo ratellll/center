@@ -1,4 +1,4 @@
-package sup.center.Member;
+package sup.center.member;
 
 public interface MemberRepository {
     void save(Member member);

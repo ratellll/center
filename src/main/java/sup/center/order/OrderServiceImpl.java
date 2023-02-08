@@ -1,8 +1,7 @@
 package sup.center.order;
 
-import sup.center.Member.Member;
-import sup.center.Member.MemberRepository;
-import sup.center.Member.MemoryMemberRepository;
+import sup.center.member.Member;
+import sup.center.member.MemberRepository;
 import sup.center.discount.DiscountPolicy;
 
 

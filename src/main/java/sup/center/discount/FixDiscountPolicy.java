@@ -1,7 +1,7 @@
 package sup.center.discount;
 
-import sup.center.Member.Grade;
-import sup.center.Member.Member;
+import sup.center.member.Grade;
+import sup.center.member.Member;
 
 public class FixDiscountPolicy implements DiscountPolicy {
 

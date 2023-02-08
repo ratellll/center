@@ -2,13 +2,11 @@ package sup.center;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import sup.center.Member.Grade;
-import sup.center.Member.Member;
-import sup.center.Member.MemberService;
-import sup.center.Member.MemberServiceImpl;
+import sup.center.member.Grade;
+import sup.center.member.Member;
+import sup.center.member.MemberService;
 import sup.center.order.Order;
 import sup.center.order.OrderService;
-import sup.center.order.OrderServiceImpl;
 
 public class OrderApp {
     public static void main(String[] args) {

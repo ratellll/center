@@ -1,4 +1,4 @@
-package sup.center.Member;
+package sup.center.member;
 
 import java.util.HashMap;
 import java.util.Map;
