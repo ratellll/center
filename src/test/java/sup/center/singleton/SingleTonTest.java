@@ -9,7 +9,7 @@ import sup.center.member.MemberService;
 public class SingleTonTest {
 
 
-    //스프링 없는 순수한 DI컨테이너인 AC는 요철할때마다 객체를 새로 생성
+    //스프링 없는 순수한 DI컨테이너인 AC는 요철할때마다 객체를 새로 생성1
     @Test
     @DisplayName("스프링없는 순수한 DI 컨테이너")
     void pureContainer() {
