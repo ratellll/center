@@ -3,6 +3,7 @@ package sup.center.singleton;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import sup.center.AppConfig;
 import sup.center.member.MemberService;
 
@@ -41,4 +42,24 @@ public class SingleTonTest {
 
         Assertions.assertThat(singleTonService1).isSameAs(singleTonService2);
     }
+
+
+    @Test
+    @DisplayName("스프링 컨테이너와 싱클톤")
+    void springContainer() {
+       // AppConfig appConfig = new AppConfig();
+
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        //1.조회 호출할 때 마다 객체 생성
+        MemberService memberService1 = ac.getBean("memberService", MemberService.class);
+        MemberService memberService2 = ac.getBean("memberService", MemberService.class);
+
+        //참조값이 다른것 확인
+        System.out.println("memberService1 = " + memberService1);
+        System.out.println("memberService2 = " + memberService2);
+
+        //mS는 ms2랑다름
+        Assertions.assertThat(memberService1).isSameAs(memberService2);
+    }
+
 }
