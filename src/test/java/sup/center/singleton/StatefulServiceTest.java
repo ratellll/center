@@ -18,12 +18,12 @@ class StatefulServiceTest {
 
 
         //threadA : a 만원 주문
-        statefulService1.order("userA", 10000);
+        int userA = statefulService1.order("userA", 10000);
         //2만원 주문
-        statefulService2.order("userB", 20000);
+        int userB = statefulService2.order("userB", 20000);
 
         //ThreadA: 사용자 A가 주문금액조회
-        int price = statefulService1.getPrice();
+        //int price = statefulService1.getPrice();
     }
 
     static class TestConfig {
